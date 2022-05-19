@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Furniture Classifier</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+
+    <body>
+        <div class="main">
+            <div class="title">
+                <h3>Furniture Classifier</h3>
+            </div>
+        </div>
+
+        <div class="panel">
+            <label for="file-upload" id="file-drag" class="upload-box">
+                <img id="image-preview" class="hidden" iewBox="0 0 128 128" width="128" height="128"/>
+            </label>
+        </div>
+
+        <div class="button_group">
+            <input type="button" id="predict" value="Predict" class="button" onclick="predictloop();" />            
+        </div>
+
+        <div id="image-box">
+            <img id="image-display" />
+            <svg id="loader" class="hidden" viewBox="0 0 128 128" width="128" height="128">
+                <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+            </svg>
+        </div>
+        <div style="text-align: center;font-weight: 900;" id="pred-result2" class="hidden"></div>
+        <a download="predictions.txt" id="downloadlink" style="display: none; text-align: center">Download</a>
+        <a download="directions.txt" id="downloadlink-direction" style="display: none; text-align: center">Download direction</a>
+    </body>
+
+    <footer>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+        <script src="script.js"></script>
+    </footer>
+
+</html>
